@@ -111,3 +111,76 @@ body::before {
     color: #9c8d82 !important;
   }
 }
+
+/* ========== 【主页 主标题】油墨复古印刷打字机 + 油墨颗粒斑驳噪点 ========== */
+.index-title,
+.site-title,
+header h1,
+.home h1,
+.hero h1,
+.banner h1 {
+  font-family: "Times New Roman", "Georgia", serif !important;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #b8a999 !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow: 0 0 1px rgba(184,169,153,0.25);
+  /* 油墨斑驳颗粒滤镜，模拟老式印刷墨水不均 */
+  filter: url(#ink-noise) blur(0.15px);
+}
+
+/* 主标题打字机闪烁光标 */
+.index-title::after,
+.site-title::after,
+header h1::after,
+.home h1::after,
+.hero h1::after,
+.banner h1::after {
+  content: "|";
+  margin-left: 6px;
+  animation: blink 1s steps(2, start) infinite;
+  color: #b8a999;
+}
+
+/* 打字动画 */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+.index-title,
+.site-title,
+header h1,
+.home h1,
+.hero h1,
+.banner h1 {
+  animation: typing 2.2s steps(30, end);
+}
+
+/* ========== 【主页 副标题】纤细哥特字体 + 蓝绿色幽光 ========== */
+.index-subtitle,
+.site-subtitle,
+header .description,
+.home .subtitle {
+  /* 更纤细哥特风格网页安全字体，贴近暮光海报纤细哥特感 */
+  font-family: "Garamond", "Palatino Linotype", serif !important;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+  color: #93a8a9 !important;
+  /* 蓝绿色幽光，由内向外柔和渐变，幽而不亮 */
+  text-shadow:
+    0 0 3px #93a8a9,
+    0 0 6px rgba(110,168,170,0.4),
+    0 0 12px rgba(80,135,138,0.22);
+}
+
+/* SVG油墨噪点滤镜（必须放在custom.css最末尾！！用来实现主标题油墨斑驳颗粒） */
+svg.ink-filter {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
