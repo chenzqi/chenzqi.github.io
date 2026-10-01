@@ -5,17 +5,32 @@
 [data-theme="dark"] {
   --card-bg: rgba(0,0,0,0.2) !important;
 }
-.card {
+
+/* 文章卡片 */
+#recent-post > .recent-post-item {
+  overflow: visible !important; /* 关键！取消父容器overflow:hidden，让模糊生效 */
+}
+#recent-post > .recent-post-item .card {
   backdrop-filter: blur(12px) saturate(160%) !important;
   -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
+  background: var(--card-bg) !important;
   border: 1px solid var(--card-border-color) !important;
   border-radius: 14px !important;
   box-shadow: 0 6px 24px rgba(0,0,0,0.1) !important;
 }
-.card .card-content {
+#recent-post > .recent-post-item .card .card-content {
   background: transparent !important;
 }
-#recent-post .card:hover {
+#recent-post > .recent-post-item .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+/* 侧边栏卡片一并开启磨砂 */
+#aside-content .card-widget {
+  overflow: visible !important;
+  backdrop-filter: blur(12px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border-color) !important;
 }
