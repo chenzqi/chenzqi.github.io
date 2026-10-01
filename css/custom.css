@@ -1,60 +1,21 @@
-/* 全局底层 */
-html, body {
-  background: transparent !important;
-  background-attachment: fixed !important;
-  background-size: cover !important;
-  background-position: center center !important;
+:root {
+  --card-bg: rgba(255,255,255,0.12) !important;
+  --card-border-color: rgba(255,255,255,0.2);
 }
-#main {
-  background: transparent !important;
+[data-theme="dark"] {
+  --card-bg: rgba(0,0,0,0.2) !important;
 }
-/* 【重点修复】移除overflow:hidden！！！ */
-#recent-posts {
-  background: transparent !important;
-  overflow: visible !important;
+.card {
+  backdrop-filter: blur(12px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
+  border: 1px solid var(--card-border-color) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.1) !important;
 }
-
-/* ========== 侧边卡片（保持不变，已经生效） ========== */
-#aside-content .card-widget {
-  background: rgba(255, 255, 255, 0.12) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
-  transition: all 0.3s ease !important;
-}
-#aside-content .card-widget:hover{
-  transform: translateY(-4px) !important;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
-}
-[data-theme="dark"] #aside-content .card-widget {
-  background: rgba(0, 0, 0, 0.20) !important;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25) !important;
-}
-[data-theme="dark"] #aside-content .card-widget:hover{
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35) !important;
-}
-#aside-content {
+.card .card-content {
   background: transparent !important;
 }
-
-/* ========== 文章卡片，和侧边完全一样参数 ========== */
-#recent-posts > .recent-post-item {
-  background: rgba(255, 255, 255, 0.12) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
-  transition: all 0.3s ease !important;
-}
-#recent-posts > .recent-post-item:hover{
-  transform: translateY(-4px) !important;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
-}
-[data-theme="dark"] #recent-posts > .recent-post-item {
-  background: rgba(0, 0, 0, 0.20) !important;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25) !important;
-}
-[data-theme="dark"] #recent-posts > .recent-post-item:hover{
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35) !important;
+#recent-post .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
 }
