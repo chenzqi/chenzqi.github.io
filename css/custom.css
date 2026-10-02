@@ -239,3 +239,13 @@ svg.ink-filter {
     background-color: rgba(232,228,220,0.08) !important;
     border: 1px solid rgba(184,169,153,0.2) !important;
 }
+
+/* 友链名称改成浅米白色 */
+.link-list .link-item .link-name {
+  color: #f5f0e1 !important;
+}
+/* 友链分组标题改成浅米白色 */
+.link-list .link-title,
+.link-list .link-subtitle {
+  color: #f5f0e1 !important;
+}
