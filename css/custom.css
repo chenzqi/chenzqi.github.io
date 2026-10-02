@@ -112,6 +112,9 @@ body::before {
   }
 }
 
+
+
+
 /* ========== 【主页 主标题】油墨复古印刷打字机 + 油墨颗粒斑驳噪点 ========== */
 .index-title,
 .site-title,
@@ -183,4 +186,56 @@ svg.ink-filter {
   position: absolute;
   width: 0;
   height: 0;
+}
+
+
+
+/* ========== 右下角全部悬浮按钮（Follow Me、齿轮、回到顶部）========== */
+#rightside > .rightside-item > .rightside-button,
+#rightside > .rightside-item > .rightside-button::before {
+    background-color: #e8e4dc !important;
+    background-image: radial-gradient(rgba(80,70,60,0.07) 1px, transparent 1px) !important;
+    background-size: 4px 4px !important;
+    border: 1px solid #b8a999 !important;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.16) !important;
+}
+
+/* 按钮内图标（github圆圈、齿轮、向上箭头） */
+#rightside > .rightside-item > .rightside-button i {
+    color: #5c534b !important;
+    filter: sepia(0.35) !important;
+}
+
+/* Follow Me文字 */
+#rightside > .rightside-item > .rightside-button span {
+    font-family: "Times New Roman", Georgia, serif !important;
+    color: #5c534b !important;
+    letter-spacing: 2px !important;
+}
+
+/* Hover效果，鼠标悬浮 */
+#rightside > .rightside-item > .rightside-button:hover,
+#rightside > .rightside-item > .rightside-button:hover::before {
+    box-shadow: 0 0 10px rgba(184,169,153,0.25) !important;
+    border-color: #b8a999 !important;
+}
+
+/* ========== 公告喇叭图标，红色改成复古棕 ========== */
+#card-announcement .item-headline i,
+#card-announcement .item-headline .fa,
+#card-announcement .item-headline .fas {
+    color: #b8a999 !important;
+    filter: sepia(0.4) !important;
+}
+
+/* 公告标题文字【公告】 */
+#card-announcement .item-headline span {
+    font-family: "Times New Roman", Georgia, serif !important;
+    color: #5c534b !important;
+}
+
+/* 公告卡片背景 */
+#card-announcement.card-widget {
+    background-color: rgba(232,228,220,0.08) !important;
+    border: 1px solid rgba(184,169,153,0.2) !important;
 }
