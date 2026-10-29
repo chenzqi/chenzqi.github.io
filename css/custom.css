@@ -249,3 +249,17 @@ svg.ink-filter {
 .link-list .link-subtitle {
   color: #f5f0e1 !important;
 }
+
+
+/* ========== 友链页 /links/ 单独顶部图 ========== */
+body.page-link #page-header {
+  background: unset !important;
+  background-image: url("/img/links-bg.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+/* 移除友链顶图的蓝色遮罩 */
+body.page-link #page-header::before {
+  display: none !important;
+}
